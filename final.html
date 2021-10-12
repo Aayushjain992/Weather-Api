@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<body>
+    <h4 >NOte :- Red represents the Minimum Temperature<br> Green represents the Maximum Temperature</h4>
+<h5 > Delhi</h5>
+<canvas id="myChart" style="width:100%;max-width:300px"></canvas>
+<h5 > Indore</h5>
+<canvas id="my" style="width:100%;max-width:300px"></canvas>
+<h5 >Mumbai</h5>
+<canvas id="my1" style="width:100%;max-width:300px"></canvas>
+
+
+<script>
+var xValues = [7102021,8102021,9102021];
+
+new Chart("myChart", {
+  type: "line",
+  label: "My First Dataset",
+  data: {
+    labels: xValues,
+    datasets: [{ 
+      data: [29,29,29],
+      borderColor: "red",
+      fill: false
+    }, { 
+      data: [38,40,39],
+      borderColor: "green",
+      fill: false
+    }]
+  },
+  options: {
+    legend: {display: false}
+  }
+});
+</script>
+
+
+<script>
+    var xValues = [7102021,8102021,9102021];
+    
+    new Chart("my", {
+      type: "line",
+      data: {
+        labels: xValues,
+        datasets: [{ 
+          data: [24,23,25],
+          borderColor: "red",
+          fill: false
+        }, { 
+          data: [33,34,33],
+          borderColor: "green",
+          fill: false
+        }]
+      },
+      options: {
+        legend: {display: false}
+      }
+    });
+    </script>
+
+<script>
+    var xValues = [7102021,8102021,9102021];
+    
+    new Chart("my1", {
+      type: "line",
+      data: {
+        labels: xValues,
+        datasets: [{ 
+          data: [28,26,27],
+          borderColor: "red",
+          fill: false
+        }, { 
+          data: [32,30,29],
+          borderColor: "green",
+          fill: false
+        }]
+      },
+      options: {
+        legend: {display: false}
+      }
+    });
+    </script>
+
+</body>
+</html>
